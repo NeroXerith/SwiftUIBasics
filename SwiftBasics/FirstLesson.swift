@@ -13,6 +13,7 @@ struct FirstLesson: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
+            Text("capitalized text" .capitalized)
             Text("Hello, world!")
                 .fontWeight(.bold)
                 .font(.title2)
