@@ -17,7 +17,7 @@ struct FirstLesson: View {
             Text("Hello, world!")
                 .fontWeight(.bold)
                 .font(.title2)
-            Text("This is me Biene Bryle Sanico")
+            Text("This is me underlined text")
                 .font(.caption)
                 .underline()
                 .italic()
@@ -42,14 +42,14 @@ struct FirstLesson: View {
             
             Text("Hello iOS Developers! this is the swiftful thinking Bootcamp. I am really handsome yehey!")
                 .multilineTextAlignment(.trailing) // Trailing is to right
-            
-                .padding()
+                .frame(width: 200, height: 100)
             
             Text("This is the leading multine line text. hope you visual the difference")
                 .multilineTextAlignment(.leading)
+                .frame(width: 300, height: 100)
             
             Text("Baseline Offset this is the example")
-                .baselineOffset(-50.0)
+                .baselineOffset(-20.0)
             
             Text("Hello world Kerning")
                 .kerning(10)
@@ -70,7 +70,6 @@ struct FirstLesson: View {
                 .frame(width: 200, height: 100, alignment: .leading)
                 
         }
-        .padding()
     }
 }
 
