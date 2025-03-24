@@ -14,7 +14,6 @@
             let secondaryColor = Color(red: 0.18, green: 0.50, blue: 0.76)
             
             let heartPrimaryColor = Color(red: 0.97, green: 0.26, blue: 0.26)
-            let heartSecondaryColor = Color(red: 0.97, green: 0.76, blue: 0.26)
             /*
              There are 3 approach to add spacing in an element
              1. .padding()
@@ -105,18 +104,30 @@
                             .foregroundStyle(Color.white)
                         , alignment: .center
                     )
-                Spacer().frame(height: 40)
+                Spacer().frame(height: 60)
                 // Much Better approach
                 Image(systemName: "heart.fill")
-                    .font(.system(size: 35))
+                    .font(.system(size: 50))
                     .foregroundStyle(Color.white)
                     .background(
                         Circle()
                             .foregroundStyle(
                                 LinearGradient(colors: [Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)), Color(#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1))], startPoint: .topTrailing, endPoint: .bottomLeading)
                             )
-                            .padding(-23)
+                            .frame(width: 120, height: 120)
                             .shadow(color:Color(#colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)), radius: 10, x: 0.0, y: 5)
+                            .overlay(
+                                Circle()
+                                    .fill(Color.blue)
+                                    .frame(width: 35, height: 35)
+                                    .overlay(
+                                        Text("9")
+                                            .font(.system(size: 20, weight: .bold))
+                                            .foregroundStyle(Color.white)
+                                    )
+                                , alignment: .topTrailing
+                                    
+                            )
                     )
                 
             }
