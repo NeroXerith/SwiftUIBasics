@@ -25,8 +25,20 @@ struct EightLesson: View {
             Rectangle()
                 .fill(Color.green)
                 .frame(width: 100, height: 100)
+        }
+        
+        HStack {
+            Rectangle()
+                .fill(Color.yellow)
+                .frame(width: 100, height: 100)
             
-                
+            Rectangle()
+                .fill(Color.yellow)
+                .frame(width: 100, height: 100)
+            
+            Rectangle()
+                .fill(Color.yellow)
+                .frame(width: 100, height: 100)
         }
     }
 }
